@@ -1,0 +1,36 @@
+﻿@model MVC_AppUser_CRUD.Models.AppUser
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form method="post">
+                    <div class="card">
+                      <ul>
+                          <li>@Model.Id</li>
+                          <li>@Model.UserName</li>
+                          <li>@Model.FirstName</li>
+                          <li>@Model.LastName</li>
+                          <li>@Model.Email</li>
+                          <li>@Model.Password</li>
+                      </ul>
+                    </div>
+                    <br />
+                    <center>
+                       <a href="/appuser/index" class="btn btn-warning">Index</a>
+                    </center>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

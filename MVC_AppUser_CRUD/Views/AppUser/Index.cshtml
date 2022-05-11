@@ -1,0 +1,59 @@
+﻿@model List<MVC_AppUser_CRUD.Models.AppUser>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+
+                <h2>Kullanıcılar</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Kullanıcı Id</th>
+                            <th>UserName</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            
+                        </tr>
+                            
+                        
+                    </thead>
+                    <tbody>
+                        @foreach (var appUser in Model)
+                        {
+                        <tr>
+                            <td>@appUser.Id</td>
+                            <td>@appUser.UserName</td>
+                            <td>@appUser.FirstName</td>
+                            <td>@appUser.LastName</td>
+                            <td>@appUser.Email</td>
+                            <td>@appUser.Password</td>
+                            <td>
+                                <a href="AddAppUser"class="btn btn-primary">Add</a>
+                                <a href="details/@appUser.Id" class="btn btn-warning">Details</a>
+                                <a href="update/@appUser.Id" class="btn btn-danger">Update</a>
+                                <a href="delete/@appUser.Id" class="btn btn-dark">Delete</a>
+                            </td>
+                        </tr>
+                         }
+
+                    </tbody>
+                </table>
+                
+               
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
